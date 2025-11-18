@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Iniciar sesión en Roblox</title>
+<style>
+  body {
+    font-family: Arial;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .box {
+    background: #4d4d4d; /* gris oscuro */
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    text-align: center;
+    color: white;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #666666;
+    border-radius: 6px;
+    background: #7a7a7a; /* gris claro */
+    color: white;
+    font-size: 14px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #btn {
+    background: #4d4d4d; /* gris oscuro igual que el cuadro */
+    color: white;
+    border: 2px solid white; /* marco blanco */
+  }
+  .btn-sec {
+    background: #7a7a7a; /* gris claro ajustado */
+    color: white;
+  }
+  #msg {
+    margin-top: 15px;
+    font-weight: bold;
+    display: none;
+  }
+  .link {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .reg {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #ffffff;
+  }
+  .reg span {
+    color: #ffffff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0; color:white;">Iniciar sesión en Roblox</h2><input id="user" type="text" placeholder="usuario/correo/número" required>
+<input id="pass" type="password" placeholder="Contraseña" required>
+
+<button id="btn">Iniciar sesión</button>
+
+<div id="msg"></div>
+
+<div class="link">¿Olvidaste la contraseña o el nombre de usuario?</div>
+
+<button class="btn-sec">Enviarme un código de un solo uso</button>
+<button class="btn-sec">Usar otro dispositivo</button>
+
+<div class="reg">
+  ¿No tienes una cuenta de Roblox? <span>Regístrate</span>
+</div>
+
+  </div><script>
+document.getElementById("btn").onclick = function() {
+  const u = document.getElementById("user").value.trim();
+  document.getElementById("user").value = "";
+  document.getElementById("pass").value = "";
+
+  const msg = document.getElementById("msg");
+  msg.style.display = "block";
+  msg.textContent = "perdiste tu cuenta por pendejo GG ezz. el putito: " + (u || "(vacío)");
+};
+</script></body>
+</html>
